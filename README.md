@@ -1,6 +1,8 @@
 # Grid game
 A c# web api for a grid game. Before running its important you install the frontend dependencies. Follow the steps below
 
+**Make sure you run it on a chromium browser**
+
 ## Project setup
 
 Open a terminal and cd to the project. Then cd once again to clientapp & npm install;
