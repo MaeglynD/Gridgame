@@ -1,4 +1,4 @@
-# beehive
+# Grid game
 A c# web api for a grid game. Before running its important you install the frontend dependencies. Follow the steps below
 
 ## Project setup
