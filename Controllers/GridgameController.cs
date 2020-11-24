@@ -20,18 +20,14 @@ namespace Gridgame._1_Web_API1.Controllers
         {
             bool[,] matrix = new bool[multiplier, multiplier];
 
-            int row = matrix.GetLength(0);
-            int col = matrix.GetLength(1);
-
-            for (int i = 0; i < row * col; i++)
+            for (int i = 0; i < multiplier * multiplier; i++)
             {
-                matrix[i / col, i % col] = false;
+                matrix[i / multiplier, i % multiplier] = false;
             }
-
 
             // Assign, at random, a true value
             Random r = new Random();
-            matrix[r.Next(row), r.Next(col)] = true;
+            matrix[r.Next(multiplier), r.Next(multiplier)] = true;
 
             return matrix;
         }
@@ -41,11 +37,11 @@ namespace Gridgame._1_Web_API1.Controllers
         {
             int[][] tests = {
                 new int[] { a, b },     // center
-				new int[] { a - 1, b }, // north
-				new int[] { a + 1, b }, // south
-				new int[] { a, b + 1 }, // east
-				new int[] { a, b - 1 }  // west
-			};
+                new int[] { a - 1, b }, // north
+                new int[] { a + 1, b }, // south
+                new int[] { a, b + 1 }, // east
+                new int[] { a, b - 1 }  // west
+            };
 
             bool lambda(int x) => x < multiplier && x > -1;
 
